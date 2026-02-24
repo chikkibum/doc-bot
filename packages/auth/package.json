@@ -1,0 +1,24 @@
+{
+  "name": "@syntio/auth",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@syntio/db": "workspace:*",
+    "@syntio/env": "workspace:*",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@syntio/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
