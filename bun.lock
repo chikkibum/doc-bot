@@ -27,6 +27,7 @@
         "@ai-sdk/react": "^3.0.3",
         "@base-ui/react": "^1.0.0",
         "@syntio/auth": "workspace:*",
+        "@syntio/db": "workspace:*",
         "@syntio/env": "workspace:*",
         "@tanstack/react-form": "^1.28.0",
         "ai": "^6.0.3",
