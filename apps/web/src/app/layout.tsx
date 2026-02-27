@@ -5,37 +5,44 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../index.css";
 import Header from "@/components/header";
 import Providers from "@/components/providers";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+	variable: "--font-geist-sans",
+	subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+	variable: "--font-geist-mono",
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "syntio",
-  description: "syntio",
+	title: "syntio",
+	description: "syntio",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Providers>
-          <div className="grid grid-rows-[auto_1fr] h-svh">
-            <Header />
-            {children}
-          </div>
-        </Providers>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en" suppressHydrationWarning>
+			<body
+				className={`${geistSans.variable} ${geistMono.variable} bg-white antialiased`}
+			>
+				<Providers>
+					<SidebarProvider>
+						<Header />
+						<div className="flex h-svh w-full flex-1 overflow-hidden bg-linear-to-r from-white to-blue-100 p-4 pt-16 text-white sm:p-6 sm:pt-16">
+							<main className="flex w-full flex-1 overflow-hidden">
+								{children}
+							</main>
+						</div>
+					</SidebarProvider>
+				</Providers>
+			</body>
+		</html>
+	);
 }
