@@ -18,8 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "syntio",
-	description: "syntio",
+	title: "Synthiolabs",
+	description:
+		"Synthiolabs is a cutting-edge platform enabling intelligent, secure, and intuitive medical chatbots to streamline healthcare communication and enhance patient outcomes.",
 };
 
 export default function RootLayout({

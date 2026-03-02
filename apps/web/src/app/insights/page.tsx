@@ -1,10 +1,9 @@
 import { auth } from "@syntio/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
-
 import { ComingSoon } from "@/components/coming-soon";
 
-export default async function DashboardPage() {
+export default async function InsightsPage() {
 	const session = await auth.api.getSession({
 		headers: await headers(),
 	});
@@ -15,8 +14,8 @@ export default async function DashboardPage() {
 
 	return (
 		<ComingSoon
-			description="Your patient dashboard is being upgraded. Check back soon!"
-			title="Dashboard"
+			description="Actionable insights powered by AI are coming soon to help you understand patient trends."
+			title="Insights"
 		/>
 	);
 }

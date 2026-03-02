@@ -27,7 +27,7 @@ async function SidebarLoader() {
 	});
 
 	if (!session) {
-		redirect("/sign-in" as any);
+		redirect("/login" as any);
 	}
 
 	const chatsResponse = await getChatsByUserId({
